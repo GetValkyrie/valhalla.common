@@ -13,6 +13,5 @@ galaxy_info:
   - cloud:ec2
 dependencies:
   - role: Stouts.collectd
+    collectd_enabled: "{{ valhalla_use_common_collectd_conf }}"
     collectd_write_graphite: yes
-
-  
