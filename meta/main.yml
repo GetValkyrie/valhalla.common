@@ -15,3 +15,12 @@ dependencies:
   - role: Stouts.collectd
     collectd_enabled: "{{ valhalla_use_common_collectd_conf }}"
     collectd_write_graphite: yes
+    collectd_write_graphite_options:
+      Host: "{{ graphite_host }}"
+      Port: 2003
+      Prefix: stats.
+      Protocol: tcp
+      AlwaysAppendDS: 'false'
+      EscapeCharacter: _
+      LogSendErrors: 'true'
+      StoreRates: 'true'
